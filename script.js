@@ -79,23 +79,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Копирование номера банковской карты
-  const copyCardBtn = document.getElementById('copyCardBtn');
-  if (copyCardBtn) {
-    copyCardBtn.addEventListener('click', (e) => {
+  // 4. Копирование номера банковской карты (Т-Банк, Сбер и др.)
+  const copyCardBtns = document.querySelectorAll('.link-card-number');
+  copyCardBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const rawCard = copyCardBtn.getAttribute('data-card') || '2202 2092 3153 2168';
+      const rawCard = btn.getAttribute('data-card') || '';
       const cleanCard = rawCard.replace(/\s+/g, '');
-      const copyTag = document.getElementById('copyTagText');
+      const copyTag = btn.querySelector('.copy-tag');
 
       const onCopied = () => {
         if (copyTag) copyTag.textContent = 'Скопировано!';
-        copyCardBtn.classList.add('copied');
+        btn.classList.add('copied');
         showToast('Номер карты скопирован в буфер обмена!');
 
         setTimeout(() => {
           if (copyTag) copyTag.textContent = 'Скопировать';
-          copyCardBtn.classList.remove('copied');
+          btn.classList.remove('copied');
         }, 2500);
       };
 
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         onCopied();
       }
     });
-  }
+  });
 
   // 5. Легковесный эффект клика (Ripple)
   const linksContainer = document.querySelector('.links-list');
