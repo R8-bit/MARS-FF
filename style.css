@@ -104,7 +104,7 @@ body {
 .glow-cyan {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, var(--accent-cyan) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.28) 0%, transparent 70%);
   top: 15%;
   left: 50%;
   transform: translateX(-50%);
@@ -307,7 +307,7 @@ body {
   border: 3px solid rgba(255, 255, 255, 0.2);
   box-shadow: 
     0 0 25px rgba(0, 0, 0, 0.8),
-    0 0 20px rgba(0, 229, 255, 0.25);
+    0 0 22px rgba(192, 38, 255, 0.4);
   z-index: 2;
   background: #14171e;
 }
@@ -324,7 +324,7 @@ body {
   transform: scale(1.08);
 }
 
-/* Анимированная неоново-синяя дымная рамка */
+/* Анимированная ярко-фиолетовая дымная рамка */
 .avatar-ink-frame-container {
   position: absolute;
   top: 50%;
@@ -343,8 +343,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* Насыщенное неоново-циановое свечение в тон волос SERBER */
-  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.8)) drop-shadow(0 0 22px rgba(0, 229, 255, 0.4));
+  /* Насыщенное ярко-фиолетовое неоновое свечение */
+  filter: drop-shadow(0 0 10px rgba(192, 38, 255, 0.95)) drop-shadow(0 0 24px rgba(168, 85, 247, 0.6));
   animation: spin-ink-ring 14s linear infinite;
   transform-origin: center center;
   transition: filter 0.4s ease;
@@ -352,7 +352,7 @@ body {
 
 .avatar-wrapper:hover .avatar-ink-frame {
   animation-duration: 8s;
-  filter: drop-shadow(0 0 16px rgba(0, 229, 255, 1)) drop-shadow(0 0 28px rgba(0, 229, 255, 0.65));
+  filter: drop-shadow(0 0 18px rgba(217, 70, 239, 1)) drop-shadow(0 0 32px rgba(192, 38, 255, 0.85));
 }
 
 @keyframes spin-ink-ring {
@@ -399,8 +399,8 @@ body {
   justify-content: center;
   width: 22px;
   height: 22px;
-  color: var(--accent-cyan);
-  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.6));
+  color: #c026d3;
+  filter: drop-shadow(0 0 8px rgba(192, 38, 255, 0.7));
 }
 
 .sub-headline {
